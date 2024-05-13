@@ -1,0 +1,7 @@
+- handleTableRefresh
+- handleTableRowSelect
+- handleColumnSelectionChange
+- handleFunctionSelectChange
+- handlePageLoad
+- handleTabsetTabChange
+- handleChartColumnChange

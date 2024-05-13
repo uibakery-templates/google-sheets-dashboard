@@ -1,0 +1,20 @@
+id: '17155819519750.12804768302704894'
+definitionId: tab
+styles: {}
+properties:
+  name: tab2
+  title: S&P 500 historic data
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  icon:
+    value: bar-chart
+    dataValue: ''
+    withData: false
+parentSlotId: '17155819519750.07602570854580093'
+index: 1
+slots:
+  - id: '17155819519750.20643385310408968'
+    name: content
+    children:
+      - table2.yml

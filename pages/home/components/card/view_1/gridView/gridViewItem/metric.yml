@@ -1,0 +1,91 @@
+id: '17153278336410.3256806536247179'
+definitionId: metric
+parentSlotId: '17153278222290.892482575600767'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 26
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 26
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{item}} '
+  name: metric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: '{{item.name}}'
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.fetchData.loading}}'
+    value: false
+  showGroupField: false
+actions: {}
+slots:
+  - id: '17153278336410.5987724565817563'
+    name: metricField
+    children:
+      - id: '17153278336410.22085338605570737'
+        definitionId: atomicCurrency
+        parentSlotId: '17153278336410.5987724565817563'
+        styles:
+          xl:
+            fontSizeOverride:
+              customValue: 0.7
+              customUnit: rem
+              themeDefaultOverridePropertyKey: metricMainFontSize
+        properties:
+          name: atomicCurrency
+          prop: value
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          mappedValue: ''
+          alignment: left
+        index: 0
+        slots: []
+  - id: '17153278336410.9690263394506065'
+    name: additionalField
+    children:
+      - id: '17153278336410.9817018999381493'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString21
+          prop: Account
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          mappedValue: For {{state.selectedRows.data.length}} selected rows
+        parentSlotId: '17153278336410.9690263394506065'
+        index: 1
+        actions: {}
+        slots: []
+  - id: '17153278336410.5230524636121827'
+    name: groupByField
+    children: []

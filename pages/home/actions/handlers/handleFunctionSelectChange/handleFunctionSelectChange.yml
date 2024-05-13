@@ -1,0 +1,56 @@
+id: '17153456919130.9505262393283809'
+kind: workflow
+name: handleFunctionSelectChange
+nameConfigured: true
+steps:
+  - id: '17153457104190.37949439825781517'
+    type: executeAction
+    name: updateAnalytics
+    params:
+      - type: action
+        value: '17153373221410.6418544338443553'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./updateAnalytics-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+parentId: '17153302404560.9648959950204075'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.handleFunctionSelectChange.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.handleFunctionSelectChange.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.handleFunctionSelectChange.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

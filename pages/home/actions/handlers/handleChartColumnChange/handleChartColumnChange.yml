@@ -1,0 +1,73 @@
+id: '17153489875470.95922229384067'
+kind: workflow
+name: handleChartColumnChange
+nameConfigured: true
+steps:
+  - id: '17153491634900.7280198531795581'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17153491096460.13907861102792696'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17153493406430.04651989150313396'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17153493563190.7999732670425677'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.handleChartColumnChange.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.handleChartColumnChange.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.handleChartColumnChange.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17153302404560.9648959950204075'

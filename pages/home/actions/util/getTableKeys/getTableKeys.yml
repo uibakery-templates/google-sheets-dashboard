@@ -1,0 +1,37 @@
+id: '17152569409670.15377511760315876'
+kind: workflow
+name: getTableKeys
+nameConfigured: true
+steps:
+  - id: '17152569453380.09743629783518548'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17153438807100.5425531808255182'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.getTableKeys.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.getTableKeys.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.getTableKeys.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

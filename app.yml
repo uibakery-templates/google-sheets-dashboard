@@ -1,0 +1,58 @@
+storeItemList:
+  - id: '17152605407280.589095845728197'
+    name: tableData
+    value: []
+    valueType: array
+    initialValue: []
+    version: 1
+    parentPageId: '1'
+  - id: '17153313673090.15132616400389343'
+    name: analytics
+    value: []
+    valueType: array
+    initialValue: []
+    version: 1
+    parentPageId: '1'
+  - id: '17153493563190.7999732670425677'
+    name: chartData
+    value: []
+    valueType: array
+    initialValue: []
+    version: 1
+    parentPageId: '1'
+  - id: '17155843027060.831470929469986'
+    name: tableNames
+    value:
+      - financial_data
+      - sp_500
+    valueType: array
+    initialValue:
+      - financial_data
+      - sp_500
+    version: 1
+    parentPageId: '1'
+  - id: '17155870595720.15997165618350517'
+    name: selectedRows
+    value: {}
+    valueType: object
+    initialValue: {}
+    version: 1
+    parentPageId: '1'
+metadata:
+  favicon: ''
+  code: ''
+  title: Google Sheets Dashboard
+  description: ''
+  breakpoints: []
+  rendererCachingEnabled: true
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions:
+    appLoad:
+      - action: '17153369191720.8781292515584638'
+        paramCode: ''
+        index: 0
+  gridVersion: 2
+  density: compact
+internalType: project

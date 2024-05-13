@@ -1,0 +1,188 @@
+id: '17152542922180.30038729632202976'
+kind: workflow
+name: fetchData
+nameConfigured: true
+steps:
+  - id: '17155846991260.2977184888502835'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17152545230980.9707326782267394'
+                type: LOAD_COLLECTION
+                name: load
+                params:
+                  - type: datasourceId
+                    value: Sample Sheet
+                    valueType: string
+                  - type: resourceId
+                    value: financial_data
+                    valueType: string
+                  - type: filters
+                    value:
+                      - column: row_number_id
+                        operation: '='
+                        value:
+                          value: ''
+                    valueType: custom
+                  - type: ordering
+                    value:
+                      limit:
+                        value: ''
+                      offset:
+                        value: ''
+                      orderBy:
+                        value: ''
+                      orderDirection:
+                        value: asc
+                    valueType: custom
+                  - type: additionalParams
+                    value:
+                      - name: ''
+                        value: ''
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ./load-successMapper.js
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: true
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                paused: false
+          - condition: false
+            steps:
+              - id: '17155846912650.4433351738545619'
+                type: LOAD_COLLECTION
+                name: load2
+                params:
+                  - type: datasourceId
+                    value: Sample Sheet
+                    valueType: string
+                  - type: resourceId
+                    value: sp_500
+                    valueType: string
+                  - type: filters
+                    value:
+                      - column: row_number_id
+                        operation: '='
+                        value:
+                          value: ''
+                    valueType: custom
+                  - type: ordering
+                    value:
+                      limit:
+                        value: ''
+                      offset:
+                        value: ''
+                      orderBy:
+                        value: ''
+                      orderDirection:
+                        value: asc
+                    valueType: custom
+                  - type: additionalParams
+                    value:
+                      - name: ''
+                        value: ''
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                paused: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17152605485360.1535169158293277'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17152605407280.589095845728197'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+  - id: '17153343772870.3073497863803678'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17152569409670.15377511760315876'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+    paused: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.fetchData.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.fetchData.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.fetchData.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17153439038010.3414662416904777'

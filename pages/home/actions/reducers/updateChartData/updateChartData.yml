@@ -1,0 +1,54 @@
+id: '17153491096460.13907861102792696'
+kind: workflow
+name: updateChartData
+nameConfigured: true
+steps:
+  - id: '17153491150380.32003206083426816'
+    type: customAsyncCode
+    name: mapData
+    params:
+      - type: asyncCode
+        value: ./mapData.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17155793024360.2899381105228853'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17153493563190.7999732670425677'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17155794735370.8186744505588934'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.updateChartData.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.updateChartData.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.updateChartData.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

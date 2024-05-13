@@ -1,0 +1,56 @@
+id: '17153373221410.6418544338443553'
+kind: workflow
+name: updateAnalyticsState
+nameConfigured: true
+steps:
+  - id: '17153373394900.98650842021012'
+    type: customAsyncCode
+    name: mapData
+    params:
+      - type: asyncCode
+        value: ./mapData.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17155897833190.4418629106123788'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17153313673090.15132616400389343'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17155794735370.8186744505588934'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.updateAnalyticsState.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.updateAnalyticsState.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.updateAnalyticsState.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
