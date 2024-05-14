@@ -137,35 +137,6 @@ steps:
     level: 1
     fallthroughError: false
     isChanged: true
-  - id: '17153343772870.3073497863803678'
-    type: executeAction
-    name: execute
-    params:
-      - type: action
-        value: '17152569409670.15377511760315876'
-        valueType: custom
-      - type: isActionsLibraryCall
-        value: false
-        valueType: custom
-      - type: customParams
-        value: ''
-        valueType: interpolatedValue
-        interpolationType: code
-      - type: successMapper
-        value: ''
-        valueType: interpolatedValue
-        interpolationType: code
-      - type: failureMapper
-        value: ''
-        valueType: interpolatedValue
-        interpolationType: code
-      - type: mapperEnabled
-        value: false
-        valueType: custom
-    level: 1
-    fallthroughError: false
-    isChanged: true
-    paused: true
 mode: manual
 modeConfigured: false
 parentPageId: '1'

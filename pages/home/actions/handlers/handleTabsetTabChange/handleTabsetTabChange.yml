@@ -35,10 +35,10 @@ steps:
     paused: false
   - id: '17155889142970.8545569951392236'
     type: customAsyncCode
-    name: code
+    name: updateSelectedRows
     params:
       - type: asyncCode
-        value: ./code.js
+        value: ./updateSelectedRows.js
         valueType: interpolatedValue
         interpolationType: code
     level: 0
@@ -105,7 +105,7 @@ steps:
     nameConfigured: true
   - id: '17155898597230.759355116569999'
     type: executeAction
-    name: execute
+    name: getTableKeys
     params:
       - type: action
         value: '17152569409670.15377511760315876'
@@ -114,7 +114,7 @@ steps:
         value: false
         valueType: custom
       - type: customParams
-        value: ./execute-customParams.js
+        value: ./getTableKeys-customParams.js
         valueType: interpolatedValue
         interpolationType: code
       - type: successMapper
@@ -131,6 +131,7 @@ steps:
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
 mode: manual
 modeConfigured: true
 parentPageId: '1'

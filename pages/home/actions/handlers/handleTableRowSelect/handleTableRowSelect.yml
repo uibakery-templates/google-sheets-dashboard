@@ -3,17 +3,24 @@ kind: workflow
 name: handleTableRowSelect
 nameConfigured: true
 steps:
-  - id: '17155871374530.936054816969321'
-    type: customAsyncCode
-    name: code
+  - id: '17156723962600.2111338065987396'
+    type: putInStore
+    name: updateSelectedRowsState
     params:
-      - type: asyncCode
-        value: ./code.js
+      - type: name
+        value: '17155870595720.15997165618350517'
+        valueType: string
+      - type: value
+        value: '{{params.selectedRows}}'
         valueType: interpolatedValue
         interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
   - id: '17153374362490.8324175301338119'
     type: executeAction
     name: updateAnalytics

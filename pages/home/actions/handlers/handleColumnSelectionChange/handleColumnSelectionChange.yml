@@ -5,7 +5,7 @@ nameConfigured: true
 steps:
   - id: '17153375663810.4458124379749375'
     type: executeAction
-    name: execute
+    name: updateAnalytics
     params:
       - type: action
         value: '17153373221410.6418544338443553'
@@ -14,7 +14,7 @@ steps:
         value: false
         valueType: custom
       - type: customParams
-        value: ./execute-customParams.js
+        value: ./updateAnalytics-customParams.js
         valueType: interpolatedValue
         interpolationType: code
       - type: successMapper
@@ -31,6 +31,7 @@ steps:
     level: 0
     fallthroughError: false
     isChanged: true
+    nameConfigured: true
 mode: manual
 modeConfigured: false
 parentPageId: '1'

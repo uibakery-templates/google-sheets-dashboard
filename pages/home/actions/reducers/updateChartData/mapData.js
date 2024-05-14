@@ -5,4 +5,5 @@ const convertStringToNumber = (str) => {
   const number = Number.parseFloat(str.replace(/,/g, ''));
   return isNaN(number) ? 0 : number;
 };
+
 return {{state.selectedRows.data.map(row => [row.row_number_id, convertStringToNumber(row[ui.select2.value])])}};

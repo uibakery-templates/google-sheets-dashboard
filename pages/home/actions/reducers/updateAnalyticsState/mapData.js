@@ -5,10 +5,10 @@ const convertStringToNumber = (str) => {
   const number = Number.parseFloat(str.replace(/,/g, ''));
   return isNaN(number) ? 0 : number;
 };
+
 const keys = {{ui.columnSelect.value}};
 const selectedRows = {{state.selectedRows.data}};
 {{state.analytics = state.analytics.filter(column => keys.includes(column.name))}};
-console.log({{state.selectedRows}})
 keys.forEach((key) => {
   const sum = selectedRows.reduce((agr, row) => {
     return agr + convertStringToNumber(row[key]);

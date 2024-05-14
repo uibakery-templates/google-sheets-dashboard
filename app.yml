@@ -20,17 +20,6 @@ storeItemList:
     initialValue: []
     version: 1
     parentPageId: '1'
-  - id: '17155843027060.831470929469986'
-    name: tableNames
-    value:
-      - financial_data
-      - sp_500
-    valueType: array
-    initialValue:
-      - financial_data
-      - sp_500
-    version: 1
-    parentPageId: '1'
   - id: '17155870595720.15997165618350517'
     name: selectedRows
     value: {}
